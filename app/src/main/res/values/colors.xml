@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_color_main">#9966CC</color>
+
+    <color name="gradient_top_active">#FFC06C</color>
+    <color name="gradient_bottom_active">#FA46A0</color>
+
+    <color name="gradient_top_passive">#02ADE1</color>
+    <color name="gradient_bottom_passive">#EC6FCF</color>
+
+    <color name="gradient_top_background">#4291D5</color>
+    <color name="gradient_bottom_background">#C06FC0</color>
+
+    <color name="button_background_active">#F5D222</color>
+    <color name="button_background_passive">#E44343</color>
+
+    <!--Transparent white colors in percentage-->
+    <!--40%--><color name="color_white_transparent_40">#66FFFFFF</color>
+
+    <!--Transparent black colors in percentage-->
+    <!--20%--><color name="color_black_transparent_70">#B3000000</color>
+
+</resources>

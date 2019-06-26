@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/shape_gradient_main">
+
+    <TextView
+            android:id="@+id/tv_title_first"
+            style="@style/Menu.TextView"
+            android:layout_marginBottom="5dp"
+            android:text="@string/title_tproger_part_first"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tv_title_second"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+    <TextView
+            android:id="@+id/tv_title_second"
+            style="@style/Menu.TextView"
+            android:layout_marginBottom="50dp"
+            android:text="@string/title_tproger_part_second"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_first"
+            app:layout_constraintBottom_toTopOf="@+id/civ_logo"/>
+
+    <Button
+            android:id="@+id/btn_search"
+            style="@style/Menu.Buttons"
+            android:text="@string/search"
+            app:layout_constraintEnd_toEndOf="@+id/civ_logo"
+            app:layout_constraintTop_toTopOf="@+id/civ_logo"/>
+
+    <Button
+            android:id="@+id/btn_history"
+            style="@style/Menu.Buttons"
+            android:text="@string/history"
+            app:layout_constraintBottom_toBottomOf="@+id/civ_logo"
+            app:layout_constraintStart_toStartOf="@+id/civ_logo"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_logo"
+            android:layout_width="@dimen/dim_iv_menu"
+            android:layout_height="@dimen/dim_iv_menu"
+            android:src="@drawable/logo_tproger_statham"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_second"/>
+
+</android.support.constraint.ConstraintLayout>

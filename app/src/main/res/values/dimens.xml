@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dim_btn_menu">75dp</dimen>
+    <dimen name="size_btn_menu">15sp</dimen>
+    <dimen name="size_tv_menu">22sp</dimen>
+    <dimen name="dim_iv_menu">300dp</dimen>
+    <dimen name="dim_pb_common">50dp</dimen>
+    <dimen name="margin8dp">8dp</dimen>
+    <dimen name="dim_item_history">120dp</dimen>
+    <dimen name="dim_iv_list_empty">100dp</dimen>
+    <dimen name="dim_tv_list_empty">150dp</dimen>
+    <dimen name="dim_dialog_delete_width">350dp</dimen>
+    <dimen name="dim_dialog_delete_height">250dp</dimen>
+</resources>

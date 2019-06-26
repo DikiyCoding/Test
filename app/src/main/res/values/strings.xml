@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="menu">Menu</string>
+    <string name="search">Search</string>
+    <string name="history">History</string>
+    <string name="articles">Articles</string>
+    <string name="article">Article</string>
+    <string name="tags">Tags</string>
+    <string name="find">Find</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="tg_btm_view">BottomView</string>
+    <string name="title_tproger_part_first">Tproger</string>
+    <string name="title_tproger_part_second">Reader</string>
+    <string name="et_search_hint">Type here…</string>
+    <string name="tv_list_empty">You haven\'t searched any information yet</string>
+    <string name="tv_msg_delete">Do you really want to delete this entry?</string>
+</resources>

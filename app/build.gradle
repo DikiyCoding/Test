@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.test"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+ext {
+    jsoup = "1.12.1"
+    circle_image = "3.0.0"
+    swipe_layout = "1.2.0@aar"
+    google_components = "1.1.1"
+    picasso = "2.71828"
+    retrofit = "2.5.0"
+    room = "1.1.1"
+    rxkotlin = "2.3.0"
+    rxjava = "2.2.3"
+    rxandroid = "2.1.0"
+    support_library = "28.0.0"
+    paging_library = "1.0.1"
+    dagger = "2.22.1"
+    junit = "4.12"
+    test = "1.0.2"
+    mockito = "2.8.9"
+    powermock = "2.0.0"
+    espresso = "3.0.2"
+    cicerone = "4.0.0"
+    nav_component = "1.0.0"
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$support_library"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    //JSoup
+    implementation "org.jsoup:jsoup:$jsoup"
+
+    //Circle Image View
+    implementation "de.hdodenhof:circleimageview:$circle_image"
+
+    //Swipe Layout
+    implementation "com.daimajia.swipelayout:library:$swipe_layout"
+
+    //Google Architecture Components
+    kapt "android.arch.lifecycle:compiler:$google_components"
+    annotationProcessor "android.arch.lifecycle:compiler:$google_components"
+    implementation "android.arch.lifecycle:extensions:$google_components"
+
+    //Picasso
+    implementation "com.squareup.picasso:picasso:$picasso"
+
+    //Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+    //Views
+    implementation "com.android.support:recyclerview-v7:$support_library"
+    implementation "com.android.support:cardview-v7:$support_library"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
+
+    //Rx
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
+
+    //Paging Library
+    implementation "android.arch.paging:runtime:$paging_library"
+
+    //Room
+    kapt "android.arch.persistence.room:compiler:$room"
+    annotationProcessor "android.arch.persistence.room:compiler:$room"
+    implementation "android.arch.persistence.room:runtime:$room"
+    implementation "android.arch.persistence.room:rxjava2:$room"
+
+    //Dagger 2
+    kapt "com.google.dagger:dagger-compiler:$dagger"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger"
+    implementation "com.google.dagger:dagger:$dagger"
+
+    //Navigation
+    implementation "ru.terrakok.cicerone:cicerone:$cicerone"                    //Cicerone
+    implementation "android.arch.navigation:navigation-fragment:$nav_component" //Google Navigation Component
+    implementation "android.arch.navigation:navigation-ui:$nav_component"
+
+    //JUnit, Mockito, PowerMock, Espresso
+    testImplementation "junit:junit:$junit"
+    testImplementation "org.mockito:mockito-core:$mockito"
+    testImplementation "org.mockito:mockito-inline:$mockito"
+    testImplementation "org.powermock:powermock-api-mockito2:$powermock"
+    testImplementation "org.powermock:powermock-module-junit4:$powermock"
+    testImplementation "org.powermock:powermock-module-junit4-rule:$powermock"
+    testImplementation "org.powermock:powermock-classloading-xstream:$powermock"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espresso"
+    androidTestImplementation "com.android.support.test.espresso:espresso-contrib:$espresso"
+    androidTestImplementation "com.android.support.test.espresso:espresso-intents:$espresso"
+//    androidTestImplementation 'com.android.support.test.uiautomator:uiautomator:2.2.0'
+    androidTestImplementation "com.android.support.test:runner:$test"
+    androidTestImplementation "com.android.support.test:rules:$test"
+}
